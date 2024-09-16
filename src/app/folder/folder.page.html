@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar translucent>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-title>{{ folder }}</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="custom-content">
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <!-- <div id="container">
+    <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+
+  <div id="container">
+
+    <!-- Contenedor de las nubes -->
+    <div class="clouds">
+      <div class="cloud cloud3"></div> <!-- Nube 3 -->
+      <div class="cloud cloud1"></div> <!-- Nube 1 -->
+      <div class="cloud cloud2"></div> <!-- Nube 2 -->
+      <div class="cloud cloud4"></div> <!-- Nube 2 -->
+      <div class="cloud cloud5"></div> <!-- Nube 3 -->
+    </div>
+
+    <div class="contenedorInfo">
+      <h3>TO-DO LIST</h3>
+      <hr>
+
+      <!--State-->
+      <h5 class="centerTxt">Task status</h5>
+
+      <div class="gridTxt">
+        <div class="iconTxtDs">
+          <img class="iconYellow" src="/assets/icons/Star1.png" alt>
+          <p>Completed</p>
+        </div>
+
+        <div class="iconTxtDs">
+          <img class="iconGray" src="/assets/icons/Star2.png" alt>
+          <p>Pending</p>
+        </div>
+      </div>
+
+      <!-- search and add -->
+      <div class="gridInputBtn">
+        <div>
+          <input class="inputSearch" type="text" name="Search">
+        </div>
+
+        <div>
+          <button class="btnAdd"> <img class="iconAdd"
+              src="/assets/icons/mas.png" alt> </button>
+        </div>
+
+      </div>
+
+      <!-- tasks -->
+      <div>
+        <h5>Laundry</h5>
+        <img src alt>
+      </div>
+
+      <div>
+        <h5>History Exam</h5>
+        <img src alt>
+      </div> 
+      
+
+      <!-- <ion-card></ion-card> -->
+    </div>
+
+  </div>
+
+</ion-content>
