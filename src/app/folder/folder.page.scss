@@ -2,16 +2,6 @@ ion-menu-button {
   color: var(--ion-color-primary);
 }
 
-#container {
-  // text-align: center;
-  // position: absolute;
-  // left: 0;
-  // right: 0;
-  // top: 50%;
-  // transform: translateY(-50%);
-  // background-color: #7B9AC6;
-}
-
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -28,13 +18,9 @@ ion-menu-button {
   text-decoration: none;
 }
 
-// ion-content{
-//   background-color: #7B9AC6;
-// }
-
 .custom-content {
-  background-color: #7b9ac6; /* Cambia el color a tu preferencia */
-  --ion-background-color: #7b9ac6; /* Cambia también el fondo predeterminado de ion-content */
+  background-color: #7b9ac6; 
+  --ion-background-color: #7b9ac6; 
   overflow: hidden;
   position: relative;
 }
@@ -45,10 +31,10 @@ ion-menu-button {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(20px); /* Se mueve 20px a la derecha */
+    transform: translateX(20px);
   }
   100% {
-    transform: translateX(0); /* Regresa a su posición original */
+    transform: translateX(0);
   }
 }
 
@@ -58,6 +44,7 @@ ion-menu-button {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin-bottom: 25px;
 }
 
 .cloud1 {
@@ -65,7 +52,7 @@ ion-menu-button {
   height: 186px;
   top: 40%;
   left: -10%;
-  background-image: url("/assets/images/cloud1.png"); /* Primera nube */
+  background-image: url("/assets/images/cloud1.png");
   animation: moveClouds 20s linear infinite;
 }
 
@@ -74,7 +61,7 @@ ion-menu-button {
   height: 120px;
   top: 5%;
   left: 60%;
-  background-image: url("/assets/images/cloud2.png"); /* Segunda nube */
+  background-image: url("/assets/images/cloud2.png");
   animation: moveClouds 25s linear infinite;
 }
 
@@ -83,7 +70,7 @@ ion-menu-button {
   height: 123px;
   top: 50%;
   left: 60%;
-  background-image: url("/assets/images/cloud3.png"); /* Tercera nube */
+  background-image: url("/assets/images/cloud3.png");
   animation: moveClouds 30s linear infinite;
 }
 
@@ -92,7 +79,7 @@ ion-menu-button {
   height: 137px;
   top: 66%;
   left: -20%;
-  background-image: url("/assets/images/cloud2.png"); /* Segunda nube */
+  background-image: url("/assets/images/cloud2.png");
   animation: moveClouds 25s linear infinite;
 }
 
@@ -101,7 +88,7 @@ ion-menu-button {
   height: 149px;
   top: 80%;
   left: 49%;
-  background-image: url("/assets/images/cloud3.png"); /* Tercera nube */
+  background-image: url("/assets/images/cloud3.png");
   animation: moveClouds 30s linear infinite;
 }
 
@@ -111,40 +98,21 @@ ion-menu-button {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Para que las nubes no interfieran con la interacción */
+  pointer-events: none;
 }
 
 .cloud {
   position: absolute;
-  // background-image: url('path/to/cloud.png'); /* Ruta de la imagen de la nube */
   background-size: contain;
   background-repeat: no-repeat;
-  // opacity: 0.7;
 }
 
-// .transparent-toolbar {
-//   background: transparent !important;  /* Fuerza el fondo transparente */
-//   --background: transparent !important; /* Usa la variable CSS de Ionic */
-//   --ion-background-color: transparent !important; /* Asegura que el color de fondo sea transparente */
-//   box-shadow: none !important; /* Elimina cualquier sombra */
+// ion-toolbar {
+//   --opacity: 0;
 // }
-
-// ion-header::after {
-//   background: none !important; /* Asegura que no haya ningún fondo en el ion-header */
-// }
-
-// .header::after {
-//   background-image: none;
-// }
-
-ion-toolbar {
-  // --background-color: transparent;
-  // --ion-color-base: transparent !important;
-  --opacity: 0;
-}
 
 .contenedorInfo {
-  margin: 20px;
+  margin: 50px 20px 20px 20px;
 }
 
 h3 {
@@ -172,18 +140,17 @@ h3 {
   background: #c2e8ff;
   border-radius: 5px;
   border: 1px solid #052659;
+  width: 100%;
 }
 
 .iconYellow {
   margin-right: 10px;
   width: 25px;
-  // background-image: url("/assets/icons/Star1.png");
 }
 
 .iconGray {
   margin-right: 10px;
   width: 25px;
-  // background-image: url("/assets/icons/Star2.png");
 }
 
 .iconTxtDs {
@@ -203,11 +170,59 @@ p {
 h5 {
   font-family: "Poppins-Light";
   color: #011023 !important;
-
+  margin-bottom: 20px;
 }
 
 .iconAdd {
   background: none;
   width: 20px;
+}
 
+ion-card {
+  --background: #032659;
+  --color: #9efff0;
+}
+
+ion-card-title {
+  --color: #c2e8ff;
+}
+
+ion-card-subtitle {
+  --color: #c2e8ff;
+  font-family: "Poppins-SemiBold" !important;
+}
+
+.ionContent {
+  color: #c2e8ff !important;
+}
+
+hr {
+  border-top: 1px solid #fad563;
+}
+
+.centrarItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-header {
+  --background: transparent !important;  // Forza la transparencia en el header
+  --border-color: transparent !important;  // Elimina el borde del header
+  backdrop-filter: none;  // Evita cualquier efecto de desenfoque
+}
+
+ion-toolbar {
+  --background: transparent !important;  // Forza la transparencia en el toolbar
+  --border-color: transparent !important;  // Elimina el borde del toolbar
+}
+
+ion-content {
+  --background: transparent !important;  // Forza la transparencia del contenido
+}
+
+ion-menu {
+  --background: transparent !important;  // Hace transparente el menú lateral
+  backdrop-filter: none;  // Elimina cualquier desenfoque de fondo
+  opacity: 0.9;  // Ajusta la opacidad según lo necesites
 }

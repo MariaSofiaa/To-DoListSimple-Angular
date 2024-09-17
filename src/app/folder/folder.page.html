@@ -3,41 +3,26 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <!-- <ion-title>{{ folder }}</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="custom-content">
 
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header> -->
-
-  <!-- <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div> -->
-
   <div id="container">
-
     <!-- Contenedor de las nubes -->
     <div class="clouds">
-      <div class="cloud cloud3"></div> <!-- Nube 3 -->
-      <div class="cloud cloud1"></div> <!-- Nube 1 -->
-      <div class="cloud cloud2"></div> <!-- Nube 2 -->
-      <div class="cloud cloud4"></div> <!-- Nube 2 -->
-      <div class="cloud cloud5"></div> <!-- Nube 3 -->
+      <div class="cloud cloud3"></div>
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="cloud cloud4"></div>
+      <div class="cloud cloud5"></div>
     </div>
 
     <div class="contenedorInfo">
       <h3>TO-DO LIST</h3>
       <hr>
-
       <!--State-->
       <h5 class="centerTxt">Task status</h5>
-
       <div class="gridTxt">
         <div class="iconTxtDs">
           <img class="iconYellow" src="/assets/icons/Star1.png" alt>
@@ -51,33 +36,68 @@
       </div>
 
       <!-- search and add -->
-      <div class="gridInputBtn">
-        <div>
-          <input class="inputSearch" type="text" name="Search">
-        </div>
+      <ion-grid style="width: 100%;">
+        <ion-row>
+          <ion-col>
+            <input class="inputSearch" type="text" name="Search">
+          </ion-col>
 
-        <div>
-          <button class="btnAdd"> <img class="iconAdd"
-              src="/assets/icons/mas.png" alt> </button>
-        </div>
+          <ion-col size="auto">
+            <button class="btnAdd"> <img class="iconAdd"
+                src="/assets/icons/mas.png" alt> </button>
 
-      </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-      <!-- tasks -->
-      <div>
-        <h5>Laundry</h5>
-        <img src alt>
-      </div>
+      <!-- CARD 1 -->
+      <ion-card>
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <!-- first column -->
+            <ion-col size="10">
+              <ion-card-header>
+                <!-- <ion-card-title>Laundry</ion-card-title> -->
+                <ion-card-subtitle>Laundry</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content class="ionContent">
+                Here's a small text description for the card content.
+              </ion-card-content>
 
-      <div>
-        <h5>History Exam</h5>
-        <img src alt>
-      </div> 
-      
+            </ion-col>
 
-      <!-- <ion-card></ion-card> -->
+            <!-- Second column -->
+            <ion-col class="centrarItem">
+              <img class="iconYellow" src="/assets/icons/Star1.png" alt>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-card>
+
+      <!-- CARD 2 -->
+      <ion-card>
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <!-- first column -->
+            <ion-col size="10">
+              <ion-card-header>
+                <ion-card-subtitle>History Exam</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content class="ionContent">
+                Here's a small text description for the card content.
+              </ion-card-content>
+
+            </ion-col>
+
+            <!-- Second column -->
+            <ion-col class="centrarItem">
+              <img class="iconYellow" src="/assets/icons/Star1.png" alt>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
     </div>
-
   </div>
 
 </ion-content>
